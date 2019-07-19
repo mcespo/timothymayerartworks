@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
         <main>{children}</main>
-        <footer>
+        <footer className="section-footer">
           {/* image */}
           <p>&copy; {new Date().getFullYear()}, Timothy Mayer</p>
         </footer>
