@@ -1,14 +1,14 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Img from "gatsby-image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = (props) => (
   <Layout>
     <SEO title="Home" />
     <header className="section-content">
-      <Image />
+      <Img fluid={props.data.headerImg.childImageSharp.fluid} />
       <article>
         <h1>Timothy Mayer</h1>
         <p>
@@ -22,20 +22,22 @@ const IndexPage = () => (
         </p>
       </article>
     </header>
+
     <section className="section-photography">
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
-      <Image />
+      <Img fluid={props.data.img01.childImageSharp.fluid} />
+      <Img fluid={props.data.img02.childImageSharp.fluid} />
+      <Img fluid={props.data.img03.childImageSharp.fluid} />
+      <Img fluid={props.data.img04.childImageSharp.fluid} />
+      <Img fluid={props.data.img05.childImageSharp.fluid} />
+      <Img fluid={props.data.img06.childImageSharp.fluid} />
+      <Img fluid={props.data.img07.childImageSharp.fluid} />
+      <Img fluid={props.data.img08.childImageSharp.fluid} />
     </section>
+
     <section className="section-content">
-      <Image />
+      <Img fluid={props.data.contactImg.childImageSharp.fluid} />
       <article>
-        <h1>Timothy Mayer</h1>
+        <h1>Contact</h1>
         <p>text</p>
       </article>
     </section>
@@ -43,3 +45,48 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const fluidImage = graphql `
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxHeight: 400) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`;
+
+export const pageQuery = graphql `
+  query {
+    headerImg: file(relativePath: { eq: "tim-mayer-artworks_orange-field.jpg" }) {
+      ...fluidImage
+    }
+    contactImg: file(relativePath: { eq: "tim-mayer-artworks_green-marsh.jpg" }) {
+      ...fluidImage
+    }
+    img01: file(relativePath: { eq: "tim-mayer-artworks_barn.jpg" }) {
+      ...fluidImage
+    }
+    img02: file(relativePath: { eq: "tim-mayer-artworks_green-field.jpg" }) {
+      ...fluidImage
+    }
+    img03: file(relativePath: { eq: "tim-mayer-artworks_pine-cones.jpg" }) {
+      ...fluidImage
+    }
+    img04: file(relativePath: { eq: "tim-mayer-artworks_white-field.jpg" }) {
+      ...fluidImage
+    }
+    img05: file(relativePath: { eq: "tim-mayer-artworks_white-lined-trees.jpg" }) {
+      ...fluidImage
+    }
+    img06: file(relativePath: { eq: "tim-mayer-artworks_yellow-white-field.jpg" }) {
+      ...fluidImage
+    }
+    img07: file(relativePath: { eq: "tim-mayer-artworks_yellow-field.jpg" }) {
+      ...fluidImage
+    }
+    img08: file(relativePath: { eq: "tim-mayer-artworks_white-wide-field.jpg" }) {
+      ...fluidImage
+    }
+  }
+`;

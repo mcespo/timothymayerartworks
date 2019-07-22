@@ -7,27 +7,16 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
 import "./layout.css"
+import Icon from "../images/timothy-mayer-artworks_logo.svg";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
         <main>{children}</main>
         <footer className="section-footer">
-          {/* image */}
+            {/* <Icon />; */}
           <p>&copy; {new Date().getFullYear()}, Timothy Mayer</p>
         </footer>
     </>
