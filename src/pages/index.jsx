@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+// import Lightbox from "../components/Lightbox"
 
 const IndexPage = (props) => (
   <Layout>
@@ -38,7 +39,13 @@ const IndexPage = (props) => (
       <Img fluid={props.data.contactImg.childImageSharp.fluid} />
       <article>
         <h1>Contact</h1>
-        <p>text</p>
+        <p>To hire Tim for event photography or to purchase prints, please contact him by email or phone.</p>
+        <p>Email: <a href="mailto:timothymayerartworks@gmail.com">timothymayerartworks@gmail.com</a></p>
+        <p>Phone: 920-915-5595</p>
+
+        <p>Mail: Timothy Mayer Artworks<br />
+           P.O. Box 882<br />
+           Appleton, Wi 54912-0882</p>
       </article>
     </section>
   </Layout>
@@ -55,6 +62,20 @@ fragment fluidImage on File {
   }
 }
 `;
+
+// export const allQuery = graphql`
+//   query {
+//     allImageSharp {
+//       edges {
+//         node {
+//           sizes(maxWidth: 1200) {
+//             ...GatsbyImageSharpSizes
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export const pageQuery = graphql `
   query {

@@ -1,12 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Timothy Mayer Artworks`,
+    description: `Timothy Mayer is a professional artist and photographer. His passion for creating paintings that began in childhood, and more than three decades of professional landscape and portrait photography.`,
+    author: `@mcespo`,
   },
   plugins: [
+      {
+        resolve: `gatsby-plugin-favicon`,
+        options: {
+            logo: "./src/favicon.png"
+        }
+      },
     `gatsby-plugin-react-helmet`,
     {
+      icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false
+      },
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
