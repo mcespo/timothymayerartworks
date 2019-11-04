@@ -1,9 +1,9 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-// import Lightbox from "../components/Lightbox"
 
 const IndexPage = props => (
   <Layout>
@@ -36,33 +36,113 @@ const IndexPage = props => (
     </header>
 
     <section className="section-photography">
-      <Img fluid={props.data.img01.childImageSharp.fluid} />
-      <Img fluid={props.data.img02.childImageSharp.fluid} />
-      <Img fluid={props.data.img03.childImageSharp.fluid} />
-      <Img fluid={props.data.img04.childImageSharp.fluid} />
-      <Img fluid={props.data.img05.childImageSharp.fluid} />
-      <Img fluid={props.data.img06.childImageSharp.fluid} />
-      <Img fluid={props.data.img07.childImageSharp.fluid} />
-      <Img fluid={props.data.img08.childImageSharp.fluid} />
-      <Img fluid={props.data.img09.childImageSharp.fluid} />
-      <Img fluid={props.data.img10.childImageSharp.fluid} />
-      <Img fluid={props.data.img11.childImageSharp.fluid} />
-      <Img fluid={props.data.img12.childImageSharp.fluid} />
-      <Img fluid={props.data.img13.childImageSharp.fluid} />
-      <Img fluid={props.data.img14.childImageSharp.fluid} />
-      <Img fluid={props.data.img15.childImageSharp.fluid} />
-      <Img fluid={props.data.img16.childImageSharp.fluid} />
-      <Img fluid={props.data.img17.childImageSharp.fluid} />
-      <Img fluid={props.data.img18.childImageSharp.fluid} />
-      <Img fluid={props.data.img19.childImageSharp.fluid} />
-      <Img fluid={props.data.img20.childImageSharp.fluid} />
-      <Img fluid={props.data.img21.childImageSharp.fluid} />
-      <Img fluid={props.data.img22.childImageSharp.fluid} />
-      <Img fluid={props.data.img23.childImageSharp.fluid} />
-      <Img fluid={props.data.img24.childImageSharp.fluid} />
-      <Img fluid={props.data.img25.childImageSharp.fluid} />
-      <Img fluid={props.data.img26.childImageSharp.fluid} />
-      <Img fluid={props.data.img27.childImageSharp.fluid} />
+      <a href={props.data.img01.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img01.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img02.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img02.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img03.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img03.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img04.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img04.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img05.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img05.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img06.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img06.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img07.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img07.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img08.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img08.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img09.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img09.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img10.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img10.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img11.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img11.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img12.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img12.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img13.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img13.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img14.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img14.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img15.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img15.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img16.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img16.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img17.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img17.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img18.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img18.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img19.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img19.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img20.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img20.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img21.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img21.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img22.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img22.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img23.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img23.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img24.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img24.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img25.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img25.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img26.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img26.childImageSharp.fixed} />
+      </a>
+
+      <a href={props.data.img27.childImageSharp.fluid.src}>
+        <Img fixed={props.data.img27.childImageSharp.fixed} />
+      </a>
     </section>
 
     <section className="section-content">
@@ -98,26 +178,22 @@ export default IndexPage
 export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
-      fluid(maxHeight: 400) {
+      fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
       }
     }
   }
 `
 
-// export const allQuery = graphql`
-//   query {
-//     allImageSharp {
-//       edges {
-//         node {
-//           sizes(maxWidth: 1200) {
-//             ...GatsbyImageSharpSizes
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const fixedImage = graphql`
+  fragment fixedImage on File {
+    childImageSharp {
+      fixed(width: 250, height: 250) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
 
 export const pageQuery = graphql`
   query {
@@ -126,43 +202,50 @@ export const pageQuery = graphql`
     ) {
       ...fluidImage
     }
-    contactImg: file(
-      relativePath: { eq: "tim-mayer-artworks_green-marsh.jpg" }
-    ) {
+    contactImg: file(relativePath: { eq: "timothy-mayer.jpg" }) {
       ...fluidImage
     }
     img01: file(relativePath: { eq: "tim-mayer-artworks_barn.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img02: file(relativePath: { eq: "tim-mayer-artworks_green-field.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img03: file(relativePath: { eq: "tim-mayer-artworks_pine-cones.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img04: file(relativePath: { eq: "tim-mayer-artworks_white-field.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img05: file(
       relativePath: { eq: "tim-mayer-artworks_white-lined-trees.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img06: file(
       relativePath: { eq: "tim-mayer-artworks_yellow-white-field.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img07: file(relativePath: { eq: "tim-mayer-artworks_yellow-field.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img08: file(
       relativePath: { eq: "tim-mayer-artworks_white-wide-field.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img09: file(relativePath: { eq: "DSC_0158 EDIT.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img10: file(
       relativePath: {
@@ -170,21 +253,25 @@ export const pageQuery = graphql`
       }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img11: file(
       relativePath: { eq: "DSC_0514 EDIT ADOBE CROP 20x7 October 20 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img12: file(
       relativePath: { eq: "DSC_1062 EDIT ADOBE CROP 20x13 October 12 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img13: file(
       relativePath: { eq: "DSC_2445 EDIT ADOBE CROP 10x8 August 30 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img14: file(
       relativePath: {
@@ -192,16 +279,19 @@ export const pageQuery = graphql`
       }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img15: file(
       relativePath: { eq: "DSC_3764 EDIT ADOBE PICASA 28 x 7 May 13 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img16: file(
       relativePath: { eq: "DSC_3974 EDIT 2 ADOBE April 7 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img17: file(
       relativePath: {
@@ -209,6 +299,7 @@ export const pageQuery = graphql`
       }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img18: file(
       relativePath: {
@@ -216,27 +307,33 @@ export const pageQuery = graphql`
       }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img19: file(
       relativePath: { eq: "DSC_4132 EDIT ADOBE 37 x 9 June 27 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img20: file(
       relativePath: { eq: "DSC_4483 EDIT 2 PICASA ADOBE May 5 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img21: file(
       relativePath: { eq: "DSC_4573 EDIT ADOBE CROP 11x17 July 31 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img22: file(relativePath: { eq: "DSC_5860 EDIT.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img23: file(relativePath: { eq: "DSC_5884 EDIT.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img24: file(
       relativePath: {
@@ -244,14 +341,17 @@ export const pageQuery = graphql`
       }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img25: file(relativePath: { eq: "DSC_6673 2.jpg" }) {
       ...fluidImage
+      ...fixedImage
     }
     img26: file(
       relativePath: { eq: "DSC_9818 EDIT ADOBE CROP 17x11 August 4 2019.jpg" }
     ) {
       ...fluidImage
+      ...fixedImage
     }
     img27: file(
       relativePath: {
@@ -259,6 +359,7 @@ export const pageQuery = graphql`
       }
     ) {
       ...fluidImage
+      ...fixedImage
     }
   }
 `
