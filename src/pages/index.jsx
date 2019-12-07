@@ -146,7 +146,11 @@ const IndexPage = props => (
     </section>
 
     <section className="section-content">
-      <Img fluid={props.data.contactImg.childImageSharp.fluid} />
+      <Img
+        fluid={props.data.contactImg.childImageSharp.fluid}
+        title="Photo by Alex Simpson"
+      />
+
       <article>
         <h1>Contact</h1>
         <p>
@@ -169,6 +173,7 @@ const IndexPage = props => (
           Appleton, Wi 54912-0882
         </p>
       </article>
+      <figcaption>Photo by Alex Simpson</figcaption>
     </section>
   </Layout>
 )

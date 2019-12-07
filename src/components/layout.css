@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|PT+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|PT+Sans&display=swap");
 
 html {
   font-family: sans-serif;
@@ -593,13 +593,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -617,7 +617,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 
@@ -717,12 +717,11 @@ pre tt:after {
   }
 }
 
-
 /* Site design */
 
 html,
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: hsl(0, 0%, 25%);
 }
 
@@ -732,7 +731,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'DM Serif Display', serif;
+  font-family: "DM Serif Display", serif;
   font-weight: normal;
 }
 
@@ -749,18 +748,22 @@ img {
   grid-auto-rows: 1fr;
 }
 
-.section-content>*,
-.section-footer>* {
+.section-content > *,
+.section-footer > * {
   max-width: 450px;
 }
 
-.section-content>* {
+.section-content > * {
   max-width: unset;
 }
 
 .section-content {
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 400px));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 400px)
+  );
   grid-gap: 100px;
+  grid-gap: 50px;
   padding: 100px 0;
 }
 
@@ -772,13 +775,14 @@ img {
 @media only screen and (max-width: 480px) {
   .section-content {
     padding: 50px 2em;
+    grid-gap: 20px;
   }
 }
 
 @media only screen and (min-width: 1300px) {
   .section-content {
     grid-template-columns: repeat(2, 450px);
-    grid-gap: 100px;
+    grid-gap: 10px 100px;
   }
 }
 

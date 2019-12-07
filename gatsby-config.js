@@ -5,23 +5,34 @@ module.exports = {
     author: `@mcespo`,
   },
   plugins: [
-      {
-        resolve: `gatsby-plugin-favicon`,
-        options: {
-            logo: "./src/favicon.png"
-        }
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-figure-caption`,
+            options: { figureClassName: "md-figure" },
+          },
+        ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          yandex: false,
-          windows: false
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        yandex: false,
+        windows: false,
       },
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,7 +49,7 @@ module.exports = {
         name: `gatsby-starter-default`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#ffffff`
+        theme_color: `#ffffff`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
