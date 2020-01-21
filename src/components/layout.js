@@ -7,21 +7,24 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { Link } from "gatsby"
+import Footer from "./footer"
 
 import "./layout.css"
+import Contact from "./contact"
 // import Icon from "../images/timothy-mayer-artworks_logo.svg";
 
-const Layout = ({ children }) => {
-  return (
-    <>
-      <main>{children}</main>
-      <footer className="section-footer">
-        {/* <Icon />; */}
-        <p>&copy; {new Date().getFullYear()}, Timothy Mayer</p>
-      </footer>
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <nav>
+      <Link to={"/"}>Home</Link>
+      <Link to={"/about"}>About</Link>
+    </nav>
+    <main>{children}</main>
+    <Contact />
+    <Footer />
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|PT+Sans&display=swap");
 
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -593,13 +594,13 @@ ul li {
   padding-left: 0;
 }
 
-li > ol {
+li>ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li > ul {
+li>ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -617,7 +618,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li > p {
+li>p {
   margin-bottom: calc(1.45rem / 2);
 }
 
@@ -748,20 +749,18 @@ img {
   grid-auto-rows: 1fr;
 }
 
-.section-content > *,
-.section-footer > * {
+.section-content>*,
+.section-footer>* {
   max-width: 450px;
 }
 
-.section-content > * {
+.section-content>* {
   max-width: unset;
 }
 
 .section-content {
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 400px)
-  );
+  grid-template-columns: repeat(auto-fill,
+      minmax(var(--auto-grid-min-size), 400px));
   grid-gap: 100px;
   grid-gap: 50px;
   padding: 100px 0;

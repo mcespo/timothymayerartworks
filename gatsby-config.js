@@ -6,20 +6,9 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-figure-caption`,
-            options: { figureClassName: "md-figure" },
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/favicon.png",
+        logo: "./src/images/favicon.png",
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -37,12 +26,11 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/gallery/`,
+        path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
