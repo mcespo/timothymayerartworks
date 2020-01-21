@@ -5,9 +5,13 @@ import TimothyMayerArtworksLogo from "./timothy-mayer-artworks-logo"
 import Img from "gatsby-image"
 
 const IndexHeader = () => {
-  const data = useStaticQuery(graphql`
+  const indexHeaderProp = useStaticQuery(graphql`
     query IndexHeaderImage {
-      image: file(relativePath: { eq: "site/timothy-mayer.jpg" }) {
+      image: file(
+        relativePath: {
+          eq: "gallery/landscapes-thumbnails/20181023-timothy-mayer-artworks_landscape-0046.jpg"
+        }
+      ) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -19,8 +23,8 @@ const IndexHeader = () => {
   return (
     <header className="section-content">
       <Img
-        fluid={data.image.childImageSharp.fluid}
-        alt="Black and white portrait photo of Timothy Mayer -Photo by Alex Simpson"
+        fluid={indexHeaderProp.image.childImageSharp.fluid}
+        alt="Photo by Timothy Mayer"
       />
       <article>
         <TimothyMayerArtworksLogo />

@@ -740,6 +740,7 @@ img {
   margin: 0;
 }
 
+.nav,
 .section-content,
 .section-photography,
 .section-footer {
@@ -766,9 +767,40 @@ img {
   padding: 100px 0;
 }
 
+.nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav ul li {
+  min-width: 80px;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+}
+
+.nav ul li a {
+  width: 100%;
+  display: inline-block;
+}
+
+.nav ul li a.active {
+  color: #000;
+  text-decoration: none;
+}
+
+.section-content svg {
+  margin-bottom: 1em;
+}
+
 .section-photography a {
   display: flex;
   justify-content: center;
+}
+
+.section-footer svg {
+  margin-bottom: 2em;
 }
 
 @media only screen and (max-width: 480px) {

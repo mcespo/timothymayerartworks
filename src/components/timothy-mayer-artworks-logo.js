@@ -2,6 +2,7 @@ import React from "react"
 
 const TimothyMayerArtworksLogo = props => (
   <svg viewBox="0 0 587.2 296.3" {...props}>
+    <title>Timothy Mayer Artworks</title>
     <defs>
       <style>{".cls-1{fill:#fff}"}</style>
     </defs>

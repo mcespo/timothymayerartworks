@@ -7,19 +7,16 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import Footer from "./footer"
 
 import "./layout.css"
 import Contact from "./contact"
+import Nav from "./nav"
 // import Icon from "../images/timothy-mayer-artworks_logo.svg";
 
 const Layout = ({ children }) => (
   <>
-    <nav>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/about"}>About</Link>
-    </nav>
+    <Nav />
     <main>{children}</main>
     <Contact />
     <Footer />
