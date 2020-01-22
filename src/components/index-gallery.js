@@ -133,5 +133,8 @@ const IntroGallery = styled("section")`
   grid-gap: 1rem;
   max-width: 80rem;
   margin: 5rem auto;
-  padding: 0 5rem;
+  padding: 0 1rem;
+  @media screen and (min-width: 961px) {
+    padding: 0 5rem;
+  }
 `
