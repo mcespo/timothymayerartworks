@@ -1,13 +1,15 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import IndexHeader from "../components/index-header"
+import IndexIntro from "../components/index-intro"
 import SEO from "../components/seo"
+import IndexGallery from "../components/index-gallery"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <IndexHeader />
+    <IndexIntro />
+    <IndexGallery />
   </Layout>
 )
 

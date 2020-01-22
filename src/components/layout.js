@@ -11,12 +11,12 @@ import Footer from "./footer"
 
 import "./layout.css"
 import Contact from "./contact"
-import Nav from "./nav"
+import Header from "./header"
 // import Icon from "../images/timothy-mayer-artworks_logo.svg";
 
 const Layout = ({ children }) => (
   <>
-    <Nav />
+    <Header />
     <main>{children}</main>
     <Contact />
     <Footer />
