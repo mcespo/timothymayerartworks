@@ -9,7 +9,7 @@ const IndexGallery = () => {
     query IndexImages {
       image01: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20130918-timothy-mayer-artworks_landscape-0001.jpg"
+          eq: "gallery/landscapes-thumbnails/20190327-timothy-mayer-artworks_landscape-0064.jpg"
         }
       ) {
         childImageSharp {
@@ -20,7 +20,7 @@ const IndexGallery = () => {
       }
       image02: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20151013-timothy-mayer-artworks_landscape-0004.jpg"
+          eq: "gallery/landscapes-thumbnails/20170301-timothy-mayer-artworks_landscape-0013.jpg"
         }
       ) {
         childImageSharp {
@@ -31,7 +31,7 @@ const IndexGallery = () => {
       }
       image03: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20151013-timothy-mayer-artworks_landscape-0006.jpg"
+          eq: "gallery/landscapes-thumbnails/20181023-timothy-mayer-artworks_landscape-0046.jpg"
         }
       ) {
         childImageSharp {
@@ -42,7 +42,7 @@ const IndexGallery = () => {
       }
       image04: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20170301-timothy-mayer-artworks_landscape-0014.jpg"
+          eq: "gallery/landscapes-thumbnails/20161012-timothy-mayer-artworks_landscape-0010.jpg"
         }
       ) {
         childImageSharp {
@@ -53,7 +53,7 @@ const IndexGallery = () => {
       }
       image05: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20171122-timothy-mayer-artworks_landscape-0016.jpg"
+          eq: "gallery/landscapes-thumbnails/20181213-timothy-mayer-artworks_landscape-0055.jpg"
         }
       ) {
         childImageSharp {
@@ -64,7 +64,7 @@ const IndexGallery = () => {
       }
       image06: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20180622-timothy-mayer-artworks_landscape-0035.jpg"
+          eq: "gallery/landscapes-thumbnails/20161012-timothy-mayer-artworks_landscape-0009.jpg"
         }
       ) {
         childImageSharp {
@@ -75,7 +75,7 @@ const IndexGallery = () => {
       }
       image07: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20181023-timothy-mayer-artworks_landscape-0045.jpg"
+          eq: "gallery/landscapes-thumbnails/20151013-timothy-mayer-artworks_landscape-0004.jpg"
         }
       ) {
         childImageSharp {
@@ -86,7 +86,7 @@ const IndexGallery = () => {
       }
       image08: file(
         relativePath: {
-          eq: "gallery/landscapes-thumbnails/20190409-timothy-mayer-artworks_landscape-0070.jpg"
+          eq: "gallery/landscapes-thumbnails/20190522-timothy-mayer-artworks_landscape-0072.jpg"
         }
       ) {
         childImageSharp {
@@ -108,18 +108,53 @@ const IndexGallery = () => {
       }
     }
   `)
-  console.log(indexGalleryProps)
   return (
     <IntroGallery>
-      <Img fluid={indexGalleryProps.image01.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image02.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image03.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image04.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image05.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image06.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image07.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image08.childImageSharp.fluid} />
-      <Img fluid={indexGalleryProps.image09.childImageSharp.fluid} />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image01.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image02.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image03.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image04.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image05.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image06.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image07.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image08.childImageSharp.fluid}
+      />
+      <Img
+        style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+        imgStyle={{ objectFit: "contain" }}
+        fluid={indexGalleryProps.image09.childImageSharp.fluid}
+      />
     </IntroGallery>
   )
 }
@@ -130,8 +165,6 @@ export default IndexGallery
 const IntroGallery = styled("section")`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-gap: 1rem;
-  max-width: 80rem;
   margin: 5rem auto;
   padding: 0 1rem;
   @media screen and (min-width: 961px) {

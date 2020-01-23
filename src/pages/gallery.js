@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import { object } from "prop-types"
 
 const GalleryPage = () => {
   const galleryProps = useStaticQuery(graphql`
@@ -27,8 +28,13 @@ const GalleryPage = () => {
     <Layout>
       <Gallery>
         {galleryProps.images.nodes.map(image => (
-          <a href={image.childImageSharp.fluid.src}>
-            <Img key={image.id} fluid={image.childImageSharp.fluid} />
+          <a key={image.id} href={image.childImageSharp.fluid.src}>
+            <Img
+              style={{ margin: "0.5rem", maxHeight: "calc(50vh - 4rem)" }}
+              imgStyle={{ objectFit: "contain" }}
+              key={image.id}
+              fluid={image.childImageSharp.fluid}
+            />
           </a>
         ))}
       </Gallery>
@@ -42,8 +48,6 @@ export default GalleryPage
 const Gallery = styled("section")`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-gap: 1rem;
-  max-width: 80rem;
   margin: 5rem auto;
   padding: 0 1rem;
   @media screen and (min-width: 961px) {
