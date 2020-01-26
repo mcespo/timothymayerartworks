@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 const IndexIntro = () => {
   return (
     <IntroArticle>
+      <h1>Welcome to Timothy Mayer Artworks</h1>
       <p>
         Whether capturing distinctive rural and urban landscapes or the unique
         personalities behind individuals featured in personal or professional
@@ -25,12 +26,20 @@ const IndexIntro = () => {
 export default IndexIntro
 
 // styles
+const Heading = styled("h1")`
+  width: 100vw;
+  padding: 0 5vw;
+  @media screen and (min-width: 1361px) {
+    padding: 2em 0;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+`
 const IntroArticle = styled("article")`
   width: 100vw;
   height: auto;
   padding: 2em 5vw;
   display: grid;
-  place-items: center;
   @media screen and (min-width: 1361px) {
     padding: 4em 0;
     margin: 0 auto;

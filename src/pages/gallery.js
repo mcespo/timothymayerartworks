@@ -49,7 +49,7 @@ const Heading = styled("h1")`
   width: 100vw;
   padding: 0 5vw;
   @media screen and (min-width: 1361px) {
-    padding: 2em 0;
+    padding: 2em 0 0;
     margin: 0 auto;
     max-width: 1200px;
   }
