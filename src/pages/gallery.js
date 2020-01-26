@@ -4,7 +4,6 @@ import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
 import Img from "gatsby-image"
-import { object } from "prop-types"
 
 const GalleryPage = () => {
   const galleryProps = useStaticQuery(graphql`
@@ -26,6 +25,7 @@ const GalleryPage = () => {
 
   return (
     <Layout>
+      <Heading>Landscapes</Heading>
       <Gallery>
         {galleryProps.images.nodes.map(image => (
           <a key={image.id} href={image.childImageSharp.fluid.src}>
@@ -45,6 +45,16 @@ const GalleryPage = () => {
 export default GalleryPage
 
 // styles
+const Heading = styled("h1")`
+  width: 100vw;
+  padding: 0 5vw;
+  @media screen and (min-width: 1361px) {
+    padding: 2em 0;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+`
+
 const Gallery = styled("section")`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
