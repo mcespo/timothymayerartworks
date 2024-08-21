@@ -1,42 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/Navigation.astro';
+import Article from '../components/Article.astro';
 import { Image } from 'astro:assets';
 import Slideshow from '../components/Slideshow.astro';
 
 import image01 from '../assets/home/DSC8177-RZ-EDIT-2-with-Pro-Sharp-3-Oct-29-2022_Detailed-HDR.jpg';
 import image02 from '../assets/home/EDC1035-RZ-EDIT-1-Mar-26-2023.jpg';
-import image03 from '../assets/home/Home_Gall_DSC_8504-RZ-EDIT-1-CROP-18-x-9.5-Mar-7-2023.webp';
-import image04 from '../assets/home/Home-Gallery_DSC5864-RZ-1024-x-684px-EDIT-1-Nov-17-2023_Enhancer.webp';
+// import image03 from '../assets/home/Home_Gall_DSC_8504-RZ-EDIT-1-CROP-18-x-9.5-Mar-7-2023.webp';
+// import image04 from '../assets/home/Home-Gallery_DSC5864-RZ-1024-x-684px-EDIT-1-Nov-17-2023_Enhancer.webp';
 import image05 from '../assets/home/Home-Gallery_DSC6644-RZ-1028px-EDIT-1-Mar-14-2024_Deep.webp';
 import image06 from '../assets/home/Home-Gallery_EDC1681-RZ-1024-x-684px-EDIT-1-Oct-9-2023-Copy.webp';
 
 const images = [
 	{ src: image01, alt: ''},
 	{ src: image02, alt: ''},
-	{ src: image03, alt: ''},
-	{ src: image04, alt: ''},
 	{ src: image05, alt: ''},
 	{ src: image06, alt: ''},
 ]
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="px-4 grid grid-flow-row mx-auto">
-		<Navigation />
-		<Slideshow>
-			{images.map((image) => (
-				<div class="swiper-slide"><Image aria-hidden="true" src={image.src} alt={image.alt} class="h-[inherit] w-full object-cover" /></div>
-			))}
-		</Slideshow>
-	</main>
+	<Slideshow>
+		{images.map((image) => (
+			<div class="swiper-slide"><Image aria-hidden="true" src={image.src} alt={image.alt} class="" /></div>
+		))}
+	</Slideshow>
+	<Article>
+		<h1 class="mt-8">Timothy Mayer Artworks & Photography specializes in authenticity</h1>
+		<p>You see it in every image. You feel it in the dedicated, photographic service provided from the first conversation through completion of each photography assignment.</p>
+		<p>Whatever your business, personal or family photography need, Timothy Mayer Artworks & Photography makes the entire experience authentically yours.</p>
+	</Article>
 </Layout>
 
-<style>
-	html, body {
-		background-color: aliceblue;
-	}
-	main {
-		width: clamp(100%, 50dvw, 62.5rem);
-	}
-</style>
+

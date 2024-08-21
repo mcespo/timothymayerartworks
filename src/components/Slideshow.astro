@@ -1,13 +1,13 @@
 ---
 ---
-<div aria-hidden="true" class="h-40 mx-auto xs:h-auto xs:container aspect-video swiper-container text-black my-8">
-    <div class="swiper main mb-4 h-[inherit]">
-        <div class="swiper-wrapper aspect-video">
+<section aria-hidden="true" class="swiper-container w-full grid">
+    <div class="main swiper w-full">
+        <div class="swiper-wrapper h-[inherit] max-h-96 aspect-video">
             <slot />
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
     </div>
-</div>
+</section>
 
 <script src="../libs/swiper.js"></script>
