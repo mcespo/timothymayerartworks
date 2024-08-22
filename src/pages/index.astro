@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ImageTitleSection from '../components/ImageTitleSection.astro';
 import Article from '../components/Article.astro';
 import { Image } from 'astro:assets';
 import Slideshow from '../components/Slideshow.astro';
 
+import timPortrait from '../assets/home/timothy-mayer-1-809x1024.jpg'
 import image01 from '../assets/home/DSC8177-RZ-EDIT-2-with-Pro-Sharp-3-Oct-29-2022_Detailed-HDR.jpg';
 import image02 from '../assets/home/EDC1035-RZ-EDIT-1-Mar-26-2023.jpg';
 // import image03 from '../assets/home/Home_Gall_DSC_8504-RZ-EDIT-1-CROP-18-x-9.5-Mar-7-2023.webp';
@@ -20,16 +22,20 @@ const images = [
 ---
 
 <Layout title="Welcome to Astro.">
-	<Slideshow>
+	<Slideshow client:load>
 		{images.map((image) => (
-			<div class="swiper-slide"><Image aria-hidden="true" src={image.src} alt={image.alt} class="" /></div>
+			<div class="swiper-slide w-[inherit] h-[inherit]"><Image aria-hidden="true" src={image.src} alt={image.alt} class="object-cover w-[inherit] h-[inherit]" /></div>
 		))}
 	</Slideshow>
+	<ImageTitleSection>
+		<h1 class="font-serif text-2xl md:text-4xl lg:text-7xl leading-tight text-balance font-thin prose dark:prose-invert">Timothy Mayer Artworks & Photography specializes in authenticity</h1>
+    	<Image loading="eager" src={timPortrait} alt="" class="md:order-first object-cover aspect-video md:aspect-square lg:aspect-auto rounded-3xl shadow-2xl" />
+	</ImageTitleSection>
 	<Article>
-		<h1 class="mt-8">Timothy Mayer Artworks & Photography specializes in authenticity</h1>
 		<p>You see it in every image. You feel it in the dedicated, photographic service provided from the first conversation through completion of each photography assignment.</p>
 		<p>Whatever your business, personal or family photography need, Timothy Mayer Artworks & Photography makes the entire experience authentically yours.</p>
+
+		<h2>Book a Session</h2>
+		<p>Book a session with Timothy Mayer Artworks and Photography today! I would enjoy speaking with you about your photography shoot or project. My pricing is extremely reasonable. Prices begin at $125.00 if you’re interested in portraiture. Corporate and Commercial work begins at $175.00. I like to tailor my photography to suit my clients needs so I encourage you to take the first step and schedule an appointment below so we can discuss the needs for your project.</p>
 	</Article>
 </Layout>
-
-

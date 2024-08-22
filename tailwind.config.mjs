@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require("tailwindcss/plugin");
 
 export default {
@@ -23,7 +24,11 @@ export default {
     gridArea: {
       "1/1": "1/1",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['"IBM Plex Serif"', ...defaultTheme.fontFamily.serif]
+      }
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),

@@ -3,8 +3,11 @@ interface Props {
 	title: string;
 }
 
-
+import { join } from "node:path";
+import { AstroFont } from "astro-font";
 import Navigation from '../components/Navigation.astro';
+import TestimonialsSection from '../components/TestimonialsSection.astro';
+import Footer from '../components/Footer.astro';
 
 const { title } = Astro.props;
 ---
@@ -18,12 +21,32 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<AstroFont
+			config={[
+				{
+				name: "IBM Plex Serif",
+				src: [
+					{
+					style: 'normal',
+					weight: '300',
+					path: join(process.cwd(), 'public', 'fonts', 'ibm-plex-serif-v19-latin-300.woff2')
+					},
+				],
+				preload: false,
+				display: "swap",
+				selector: "body",
+				fallback: "sans-serif",
+				},
+			]}
+		/>
 	</head>
-	<body class="grid grid-flow-row w-dvw">
+	<body class="grid grid-flow-row w-dvw font-sans antialiased">
 		<Navigation />
-		<main class="mx-auto px-6 pt-8">
+		<main class="mx-auto grid grid-flow-row justify-items-center">
 			<slot />
+			<TestimonialsSection />
 		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
