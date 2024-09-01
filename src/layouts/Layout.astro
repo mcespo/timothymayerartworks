@@ -1,10 +1,10 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
-import { join } from "node:path";
-import { AstroFont } from "astro-font";
+import { join } from 'node:path';
+import { AstroFont } from 'astro-font';
 import Navigation from '../components/Navigation.astro';
 import TestimonialsSection from '../components/TestimonialsSection.astro';
 import Footer from '../components/Footer.astro';
@@ -14,70 +14,65 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<AstroFont
-			config={[
-				{
-				name: "IBM Plex Serif",
-				src: [
-					{
-					style: 'normal',
-					weight: '300',
-					path: join(process.cwd(), 'public', 'fonts', 'ibm-plex-serif-v19-latin-300.woff2')
-					},
-				],
-				preload: false,
-				display: "swap",
-				selector: "body",
-				fallback: "sans-serif",
-				},
-			]}
-		/>
-	</head>
-	<body class="grid grid-flow-row w-dvw font-sans antialiased">
-		<Navigation />
-		<main class="mx-auto grid grid-flow-row justify-items-center">
-			<slot />
-			<TestimonialsSection />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <AstroFont
+      config={[
+        {
+          name: 'IBM Plex Serif',
+          src: [
+            {
+              style: 'normal',
+              weight: '300',
+              path: join(process.cwd(), 'public', 'fonts', 'ibm-plex-serif-v19-latin-300.woff2'),
+            },
+          ],
+          preload: false,
+          display: 'swap',
+          selector: 'body',
+          fallback: 'sans-serif',
+        },
+      ]}
+    />
+  </head>
+  <body class="grid w-dvw grid-flow-row font-sans antialiased">
+    <Navigation />
+    <main class="mx-auto grid grid-flow-row justify-items-center">
+      <slot />
+      <TestimonialsSection />
+    </main>
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	[x-cloak] {
-		display: none !important;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  [x-cloak] {
+    display: none !important;
+  }
 </style>

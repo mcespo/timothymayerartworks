@@ -1,13 +1,15 @@
 ---
+
 ---
-<section aria-hidden="true" class="swiper-container w-full grid md:h-[36rem]" style="--swiper-navigation-color: #fff">
-    <div class="main swiper w-full h-[inherit]">
-        <div class="swiper-wrapper w-[inherit] h-[inherit] aspect-video">
-            <slot />
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+
+<section aria-hidden="true" class="swiper-container grid w-full md:h-[36rem]" style="--swiper-navigation-color: #fff">
+  <div class="main swiper h-[inherit] w-full">
+    <div class="swiper-wrapper aspect-video h-[inherit] w-[inherit]">
+      <slot />
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
 </section>
 
 <script src="../libs/swiper.js"></script>
